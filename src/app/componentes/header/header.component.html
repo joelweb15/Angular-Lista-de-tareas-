@@ -1,0 +1,11 @@
+<!--el evento botonClick viene del componente boton y activa el metodo alternarAddTask en el .ts-->
+<!--los campos {{mostrarAddTask ? 'red':'green'}} eligen entre 2 valores para el atributo segun el valor booleano de la variable-->
+<header>
+    <h1>{{titulo}}</h1>
+    <app-boton 
+    color="{{mostrarAddTask ? 'red':'green'}}" 
+    texto="{{mostrarAddTask ? 'Cerrar':'Add Takk'}}"
+    (botonClick)="alternarFormulario()">
+    </app-boton>
+</header>
+

@@ -1,0 +1,26 @@
+<!--formulario con 3 campos inputs y un submit-->
+
+<!--la directiva/evento (ngSubmit)="metodo" reconoce cuando se apreta el boton submit y activa el evento que tiene como valor-->
+<!--la directiva *ngIf segun el valor de la variable mostarAddTask oculta el formulario o no-->
+<form (ngSubmit)="onSubmit()" *ngIf="mostrarAddTask">
+    <div class="form-control">
+        <label for="text">Tarea</label>
+        <!--le agregamos un [(ngModel)] para un banding, contiene la variable definida es el .ts-->
+        <input type="text" name="text" id="text" placeholder="Porfavor, escriba una tarea..." [(ngModel)]="texto"/>
+    </div>
+
+    <div class="form-control">
+        <label for="day">Dia</label>
+        <!--otro [(ngModel)] aqui-->
+        <input type="text" name="dia" id="dia" placeholder="Porfavor, escriba un dia..." [(ngModel)]="dia"/>
+    </div>
+
+    <div class="form-control form-control-check">
+        <label for="reminder">reminder</label>
+        <!--otro [(ngModel)] aqui-->
+        <input type="checkbox" name="reminder" id="reminder" [(ngModel)]="reminder"/>
+    </div>
+    <input type="submit" value="Guardar Tarea" class="btn btn-block">
+</form>
+
+

@@ -1,0 +1,10 @@
+<!--el ng class del div cambia el borde de la tarea segun el valor del dato reminder-->
+<!--el evento dbClick activa un metodo que emite al padre-->
+<div class="task" [ngClass]="{reminder: task.reminder }" (click)="onToggle(task)">
+    <h3>
+        {{task.texto}}
+        <!--icono con el evento borrar (el parametro "tarea" esta definido en un @input del .ts)-->
+        <fa-icon [icon]="faTimes" (click)="onDelete(task)"></fa-icon>
+    </h3>
+    <p>{{task.dia}}</p>
+</div>

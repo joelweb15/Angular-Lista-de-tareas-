@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+      "id": 2,
+      "texto": "entregar desafio del modulo 4",
+      "dia": "7 de abril",
+      "reminder": false
+    },
+    {
+      "id": 3,
+      "texto": "entregar desafio del modulo 6",
+      "dia": "15 abril",
+      "reminder": false
+    },
+    {
+      "id": 4,
+      "texto": "entregar el desafio del 7 y 8",
+      "dia": "25 de abril",
+      "reminder": false
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+<!--crea multiples componentes (task-item)-->
+
+<!--tambien le pasamos como atributo cada tarea recibida por
+el ngFor, con [task]="task"-->
+
+<!--contiene un evento que capta un metodo y tarea emitidos por
+ tarea-item y activa el metodo deleteTask(task) de su .ts-->
+
+<!--contiene un evento que capta la tarea y metodo onTogglereminder emitidos
+por tarea-item y activa un metodo en el .ts-->
+
+<app-task-item *ngFor="let task of tareas" [task]="task" (onDeleteTask)="deleteTask(task)" (onToggleReminder)="toggleReminder(task)">
+</app-task-item>
+
+<!--recibe un evento de add-task y activa un add Event (definido en el .ts)-->
+<app-add-task (onAddTask)="addTask($event)"></app-add-task>
